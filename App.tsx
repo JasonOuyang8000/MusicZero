@@ -17,6 +17,7 @@ import {
   View,
 } from 'react-native';
 import TrackPlayer from 'react-native-track-player';
+import MusicPlayer from './src/components/MusicPlayer';
 
 
 type SectionProps = PropsWithChildren<{
@@ -30,6 +31,12 @@ function App(): JSX.Element {
 
   async function setupTrackPlayer()  {
     const player = await TrackPlayer.setupPlayer();
+    const track = {
+      url: require('./music_files/music_1.mp3'), 
+      title: 'Test',
+      artist: 'test',
+    };
+    await TrackPlayer.add([track]);
     setIsLoaded(true);
   };
 
@@ -52,7 +59,7 @@ function App(): JSX.Element {
         contentInsetAdjustmentBehavior="automatic"
        >
           <Text style={styles.headerStyle}>Music Zero App</Text>
-          
+          <MusicPlayer />
       </ScrollView>
     </SafeAreaView>
   );
