@@ -5,17 +5,18 @@
  * @format
  */
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import type {PropsWithChildren} from 'react';
 import {
+  Dimensions,
   SafeAreaView,
   ScrollView,
-  StatusBar,
   StyleSheet,
   Text,
   useColorScheme,
   View,
 } from 'react-native';
+import TrackPlayer from 'react-native-track-player';
 
 
 type SectionProps = PropsWithChildren<{
@@ -25,8 +26,24 @@ type SectionProps = PropsWithChildren<{
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
+
+  async function setupTrackPlayer()  {
+    const player = await TrackPlayer.setupPlayer();
+    setIsLoaded(true);
+  };
+
+  useEffect(() => {
+    setupTrackPlayer();
+  },[]);
 
 
+  if (!isLoaded) {
+    return <View style={styles.loadingView}>
+      <Text>Loading...</Text>
+    </View>
+  }
+  
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -35,6 +52,7 @@ function App(): JSX.Element {
         contentInsetAdjustmentBehavior="automatic"
        >
           <Text style={styles.headerStyle}>Music Zero App</Text>
+          
       </ScrollView>
     </SafeAreaView>
   );
@@ -63,6 +81,13 @@ const styles = StyleSheet.create({
   headerStyle: {
     fontSize: 36,
     textAlign:'center'
+  },
+  loadingView: {
+    flex: 1,
+    height: Dimensions.get('window').height,
+    borderWidth: 1,
+    alignItems: 'center',
+    justifyContent:'center'
   }
 });
 
