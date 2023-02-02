@@ -13,7 +13,23 @@ export default function MusicPlayer(): JSX.Element{
         if (State.Playing === state) {
             console.log(state);
         }
-    };
+
+        let trackIndex = await TrackPlayer.getCurrentTrack();
+        
+        if (trackIndex !== null) {
+            let trackObject = await TrackPlayer.getTrack(trackIndex);
+            console.log(`Title: ${trackObject?.title}`);
+    
+            const position = await TrackPlayer.getPosition();
+            const duration = await TrackPlayer.getDuration();
+            console.log(`${duration - position} seconds left.`);
+        }
+     
+            };
+
+    function pauseMusic() {
+
+    }
 
     return (
         <View>
@@ -24,6 +40,11 @@ export default function MusicPlayer(): JSX.Element{
             </TouchableOpacity>
             <TouchableOpacity onPress={getState}>
                 <Text>State</Text>
+            </TouchableOpacity>
+            <TouchableOpacity onPress={pauseMusic}>
+            <View>
+                <Text>Pause</Text>    
+            </View> 
             </TouchableOpacity>
         </View>
     );
