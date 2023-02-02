@@ -18,6 +18,7 @@ import {
 } from 'react-native';
 import TrackPlayer from 'react-native-track-player';
 import MusicPlayer from './src/components/MusicPlayer';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 
 type SectionProps = PropsWithChildren<{
@@ -53,15 +54,14 @@ function App(): JSX.Element {
   
 
   return (
-    <SafeAreaView style={styles.safeArea}>
-
+    <SafeAreaProvider style={styles.safeArea}>
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
        >
           <Text style={styles.headerStyle}>Music Zero App</Text>
           <MusicPlayer />
       </ScrollView>
-    </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
 
