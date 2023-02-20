@@ -19,6 +19,8 @@ import {
 import TrackPlayer from 'react-native-track-player';
 import MusicPlayer from './src/components/MusicPlayer';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { ThemeProvider } from '@rneui/themed';
+import { theme as baseTheme } from './src/theme';
 
 
 type SectionProps = PropsWithChildren<{
@@ -30,6 +32,7 @@ function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
 
+  
   async function setupTrackPlayer()  {
     const player = await TrackPlayer.setupPlayer();
     const track = {
@@ -52,16 +55,13 @@ function App(): JSX.Element {
     </View>
   }
   
-
   return (
-    <SafeAreaProvider style={styles.safeArea}>
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-       >
-          <Text style={styles.headerStyle}>Music Zero App</Text>
+    <SafeAreaProvider>
+       <ThemeProvider theme={baseTheme}>
           <MusicPlayer />
-      </ScrollView>
+      </ThemeProvider>
     </SafeAreaProvider>
+    
   );
 }
 
@@ -69,9 +69,6 @@ const styles = StyleSheet.create({
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
-  },
-  safeArea: {
-    padding: 20
   },
   sectionTitle: {
     fontSize: 24,
@@ -85,14 +82,7 @@ const styles = StyleSheet.create({
   highlight: {
     fontWeight: '700',
   },
-  headerStyle: {
-    fontSize: 36,
-    textAlign:'center'
-  },
   loadingView: {
-    flex: 1,
-    height: Dimensions.get('window').height,
-    borderWidth: 1,
     alignItems: 'center',
     justifyContent:'center'
   }

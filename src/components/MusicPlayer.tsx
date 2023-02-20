@@ -1,8 +1,12 @@
+import { useTheme } from '@rneui/themed';
 import React from 'react';
-import {Text, TouchableOpacity, View} from 'react-native';
+import {ScrollView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import TrackPlayer, {State} from 'react-native-track-player';
 
 export default function MusicPlayer(): JSX.Element{
+    const {theme} = useTheme();
+
 
     function playMusic() {
         TrackPlayer.play();
@@ -28,24 +32,36 @@ export default function MusicPlayer(): JSX.Element{
             };
 
     function pauseMusic() {
-
+        TrackPlayer.pause();
     }
 
     return (
-        <View>
-            <TouchableOpacity onPress={playMusic}>
-            <View>
-                <Text>Play</Text>    
-            </View> 
-            </TouchableOpacity>
-            <TouchableOpacity onPress={getState}>
-                <Text>State</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={pauseMusic}>
-            <View>
-                <Text>Pause</Text>    
-            </View> 
-            </TouchableOpacity>
-        </View>
+        <SafeAreaView style={{backgroundColor: theme.colors.darkBlue, flex: 1, padding: 30}}>
+            <ScrollView >
+                <Text style={styles.headerStyle}>Music Zero</Text>
+                <TouchableOpacity onPress={playMusic}>
+                <View>
+                    <Text>Play</Text>    
+                </View> 
+                </TouchableOpacity>
+                <TouchableOpacity onPress={getState}>
+                    <Text>State</Text>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={pauseMusic}>
+                <View>
+                    <Text>Pause</Text>    
+                </View> 
+                </TouchableOpacity>
+            </ScrollView>
+        </SafeAreaView>
     );
 };
+
+const styles= StyleSheet.create({
+    headerStyle: {
+        fontSize: 36,
+        textAlign:'center',
+        color: '#fff',
+        fontFamily: "FS Me",
+      },
+})

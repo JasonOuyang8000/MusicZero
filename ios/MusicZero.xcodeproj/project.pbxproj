@@ -15,6 +15,14 @@
 		7699B88040F8A987B510C191 /* libPods-MusicZero-MusicZeroTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-MusicZero-MusicZeroTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		F637AF42298B8B0C0008099F /* file.swift in Sources */ = {isa = PBXBuildFile; fileRef = F637AF41298B8B0C0008099F /* file.swift */; };
+		A54DE3D7D72B48E59A1DC500 /* FS Me-Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 42353447F3F2444C96CF2229 /* FS Me-Bold Italic.otf */; };
+		F88BB98BD8DA40029106DB72 /* FS Me-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CFA56AB4587D40F7B197B8A6 /* FS Me-Bold.otf */; };
+		2439261356E14D8A832C01F6 /* FS Me-Heavy Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 34EC26F807DA4BD08534E3B2 /* FS Me-Heavy Italic.otf */; };
+		4708134A23D34CC2855DD051 /* FS Me-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4E4BB56CF9C4E1E866D931C /* FS Me-Heavy.otf */; };
+		E5DB266C3B8840DEBAB2EB7C /* FS Me-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 20D73EEA83B24E5FBFAD3710 /* FS Me-Italic.otf */; };
+		97E9EA7725A34759A942720C /* FS Me-Light Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D784798F1BA44D4A94CF4D7 /* FS Me-Light Italic.otf */; };
+		95BA564BF77441DC83F89187 /* FS Me-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = DA57543D48B44503A48BF802 /* FS Me-Light.otf */; };
+		74AD15BB08D14D71A43A1F06 /* FS Me-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AD9C1CC5117B4B3485FB6D7E /* FS Me-Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +55,14 @@
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		F637AF40298B8B0B0008099F /* MusicZero-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicZero-Bridging-Header.h"; sourceTree = "<group>"; };
 		F637AF41298B8B0C0008099F /* file.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = file.swift; sourceTree = "<group>"; };
+		42353447F3F2444C96CF2229 /* FS Me-Bold Italic.otf */ = {isa = PBXFileReference; name = "FS Me-Bold Italic.otf"; path = "../assets/fonts/FS Me-Bold Italic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CFA56AB4587D40F7B197B8A6 /* FS Me-Bold.otf */ = {isa = PBXFileReference; name = "FS Me-Bold.otf"; path = "../assets/fonts/FS Me-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		34EC26F807DA4BD08534E3B2 /* FS Me-Heavy Italic.otf */ = {isa = PBXFileReference; name = "FS Me-Heavy Italic.otf"; path = "../assets/fonts/FS Me-Heavy Italic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C4E4BB56CF9C4E1E866D931C /* FS Me-Heavy.otf */ = {isa = PBXFileReference; name = "FS Me-Heavy.otf"; path = "../assets/fonts/FS Me-Heavy.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		20D73EEA83B24E5FBFAD3710 /* FS Me-Italic.otf */ = {isa = PBXFileReference; name = "FS Me-Italic.otf"; path = "../assets/fonts/FS Me-Italic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0D784798F1BA44D4A94CF4D7 /* FS Me-Light Italic.otf */ = {isa = PBXFileReference; name = "FS Me-Light Italic.otf"; path = "../assets/fonts/FS Me-Light Italic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DA57543D48B44503A48BF802 /* FS Me-Light.otf */ = {isa = PBXFileReference; name = "FS Me-Light.otf"; path = "../assets/fonts/FS Me-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AD9C1CC5117B4B3485FB6D7E /* FS Me-Regular.otf */ = {isa = PBXFileReference; name = "FS Me-Regular.otf"; path = "../assets/fonts/FS Me-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +143,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				307B028D4F5C467BA4E3C17E /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -152,6 +169,22 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		307B028D4F5C467BA4E3C17E /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				42353447F3F2444C96CF2229 /* FS Me-Bold Italic.otf */,
+				CFA56AB4587D40F7B197B8A6 /* FS Me-Bold.otf */,
+				34EC26F807DA4BD08534E3B2 /* FS Me-Heavy Italic.otf */,
+				C4E4BB56CF9C4E1E866D931C /* FS Me-Heavy.otf */,
+				20D73EEA83B24E5FBFAD3710 /* FS Me-Italic.otf */,
+				0D784798F1BA44D4A94CF4D7 /* FS Me-Light Italic.otf */,
+				DA57543D48B44503A48BF802 /* FS Me-Light.otf */,
+				AD9C1CC5117B4B3485FB6D7E /* FS Me-Regular.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -249,6 +282,14 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				A54DE3D7D72B48E59A1DC500 /* FS Me-Bold Italic.otf in Resources */,
+				F88BB98BD8DA40029106DB72 /* FS Me-Bold.otf in Resources */,
+				2439261356E14D8A832C01F6 /* FS Me-Heavy Italic.otf in Resources */,
+				4708134A23D34CC2855DD051 /* FS Me-Heavy.otf in Resources */,
+				E5DB266C3B8840DEBAB2EB7C /* FS Me-Italic.otf in Resources */,
+				97E9EA7725A34759A942720C /* FS Me-Light Italic.otf in Resources */,
+				95BA564BF77441DC83F89187 /* FS Me-Light.otf in Resources */,
+				74AD15BB08D14D71A43A1F06 /* FS Me-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
